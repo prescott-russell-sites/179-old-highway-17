@@ -149,3 +149,26 @@ footer{background:var(--navy)}
 .reveal.in{opacity:1;transform:none}
 @media(max-width:700px){.hero-card{padding:24px 20px 20px;margin-top:-44px;border-radius:20px}.hero-img{height:44vh;min-height:260px}}
 @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none}}
+
+/* ===== v9 palette: modern corporate blue/white (Oct 28, 2026) ===== */
+:root{
+  --green:#17456e; --green2:#2c6ea8; --sage:#e9eff5; --sage2:#d3dee8;
+  --cream:#f2f6fa; --paper:#ffffff; --navy:#10263f; --ink:#22303c;
+  --accent:#1f6fb2; --accent2:#155a94;
+}
+body{background:var(--paper)}
+.topbar{background:rgba(16,38,63,.95)}
+.badges span{background:var(--sage);color:var(--green);border-color:var(--sage2)}
+.badges span:nth-child(3){background:var(--green);color:#fff;border-color:var(--green)}
+.btn{border-color:#c3d2df}
+.btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 10px 24px rgba(31,111,178,.32)}
+.card{background:#fff;border-color:var(--sage2)}
+#faq details{background:#fff}
+.form{background:#fff}
+.uses li{background:var(--cream)}
+.concepts{background:linear-gradient(180deg,#e9eff5,#f4f8fb)}
+.cmp-label.right{background:rgba(31,111,178,.92)}
+footer{background:#0d1f33}
+.callbar a{color:var(--green)}
+.feature-photo{margin:0;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--sage2)}
+.feature-photo img{width:100%;height:100%;min-height:240px;object-fit:cover;display:block}
