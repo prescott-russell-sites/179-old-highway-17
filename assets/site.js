@@ -9,7 +9,7 @@
     e.preventDefault();
     var fr = document.documentElement.lang === 'fr';
     var get = function (n) { var el = form.querySelector('[name="' + n + '"]'); return el ? el.value.trim() : ''; };
-    var subject = (fr ? 'Demande — 179–181 Old Highway 17, Plantagenet' : 'Inquiry — 179–181 Old Highway 17, Plantagenet');
+    var subject = (fr ? 'Demande — 179 Old Highway 17, Plantagenet' : 'Inquiry — 179 Old Highway 17, Plantagenet');
     var body = (fr ? 'Nom : ' : 'Name: ') + get('name') + '\n' +
       (fr ? 'Courriel ou téléphone : ' : 'Email or phone: ') + get('contact') + '\n' +
       (fr ? 'Entreprise / usage envisagé : ' : 'Business / intended use: ') + get('use') + '\n\n' + get('message');
