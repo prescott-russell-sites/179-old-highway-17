@@ -57,3 +57,14 @@ document.querySelectorAll('.compare').forEach(function (box) {
     if (e.key === 'ArrowRight') show(i + 1);
   });
 })();
+
+// v7: gentle reveal-on-scroll for sections (skipped for reduced motion or no IO support).
+(function () {
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('main section, footer .wrap');
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+})();
